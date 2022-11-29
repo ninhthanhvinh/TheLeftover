@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11896cdb5f3b4241be2f593bb2cff54, type: 3}
+  m_Name: Armor 1
+  m_EditorClassIdentifier: 
+  uiDisplay: {fileID: 1417939363, guid: 86b8da97fa5afb74bbb47de6029877cf, type: 3}
+  stackable: 0
+  type: 3
+  description: 
+  data:
+    name: 
+    Id: 1
+    buffs:
+    - attributes: 2
+      value: 0
+      min: 50
+      max: 100
+  characterDisplay: {fileID: 7902019044656332348, guid: ac238a9b214b0b6499ad8cdb583bb3a3,
+    type: 3}

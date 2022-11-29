@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e11896cdb5f3b4241be2f593bb2cff54, type: 3}
+  m_Name: M4A1
+  m_EditorClassIdentifier: 
+  uiDisplay: {fileID: 1277887715, guid: 86b8da97fa5afb74bbb47de6029877cf, type: 3}
+  stackable: 0
+  type: 1
+  description: 
+  data:
+    name: 
+    Id: 4
+    buffs: []
+  characterDisplay: {fileID: 8706077362548753715, guid: 3475e0c70ed6c7f4ea97696d54b6c4f9,
+    type: 3}

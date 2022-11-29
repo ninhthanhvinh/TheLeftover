@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 86b8da97fa5afb74bbb47de6029877cf
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 739
+        width: 93
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76874537327ce1f43a119c601365645c
+      internalID: -1002996242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 743
+        width: 87
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdff42587774dc448922b0bc87edee93
+      internalID: -2036071320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 749
+        width: 44
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d9c733e90aa844da8da1352d664bda
+      internalID: 213870486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 747
+        width: 52
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2001f562fc3a57a4caf32799fc524332
+      internalID: 200617110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 694
+        width: 120
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d2b99eb9a547041a384170faf0a0c1
+      internalID: 1116008037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_5
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 694
+        width: 114
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45e092119ca364499de2ee75f909a5e
+      internalID: -1139128158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_6
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 694
+        width: 76
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551eef6111fe27a4ea50c94b6f69ef16
+      internalID: -1130817184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 616
+        width: 114
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8440fe5a3f359dd4094b22d1026d77d5
+      internalID: 1277887715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_8
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 614
+        width: 84
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e62f71470077540a7692a4f76c6abd
+      internalID: 1259264541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_9
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 620
+        width: 56
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640b4cf6fee3dae4887e3e9e909d9d65
+      internalID: -2080819416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_10
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 536
+        width: 52
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3728fd5356fe964db7ce1fbeb56814c
+      internalID: -362042105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_11
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 543
+        width: 84
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44aecd4a56ab1e40bef63dcadec336a
+      internalID: 1488712626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_12
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 549
+        width: 89
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95530d5f9f0bbf248941dfdc55146d8b
+      internalID: -1354969583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_13
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 457
+        width: 119
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbe9c884b56979f43a2b557bb8d29989
+      internalID: 1033432483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 467
+        width: 102
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca2eaf90cc8f6e341911012a971a84c2
+      internalID: -816948652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_15
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 461
+        width: 93
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802f2c21492c845459f286e68edbc12d
+      internalID: 875648749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_16
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 377
+        width: 113
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f512c822d67e1ed438fd3fc7668c6167
+      internalID: 316865415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_17
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 379
+        width: 132
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1d3068b72d071489c55a56539ff837
+      internalID: -1649924972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_18
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 387
+        width: 122
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d1559018191fb408830f99f579b7a9
+      internalID: 980683450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_19
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 303
+        width: 144
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fc79da80e38ba40b2ec65109287548
+      internalID: -1841129089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_20
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 348
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36a287ef8d1632a4199d88efe0813c6b
+      internalID: 1872650452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_21
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 295
+        width: 148
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f23bb01e7d114346b4693e90b8a5696
+      internalID: -1753186780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_22
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 315
+        width: 50
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439ef15f32463a143a993bdb3408096d
+      internalID: -197239845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 234
+        width: 101
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92bfc1c9c87bbcb4483e7114e7cc9b96
+      internalID: 2126835891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_24
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 234
+        width: 122
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc67776e89af5b747922942c754d0d0b
+      internalID: 989550288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_25
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 266
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfbd4a8ff8f0bf479508f9254bb90c2
+      internalID: 1905593906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_26
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 213
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8f31eeff08567f41bdd0560796c1e18
+      internalID: -1784835554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_27
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 166
+        width: 91
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1ec7d02508bccd4284a4c3f81f034c9
+      internalID: 474538739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 170
+        width: 101
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcbf05eab6a7bc4d9601a1bb940890b
+      internalID: -1406354902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_29
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 172
+        width: 130
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cf6829661019a41abe9a8522051e6b
+      internalID: 1461665965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_30
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 86
+        width: 112
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343a65dfe889735488a7c7674087e65d
+      internalID: -759227843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_31
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 84
+        width: 124
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4322b0907c74e6a459445dcc62c4051d
+      internalID: 1186981324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_32
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 107
+        width: 65
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd09e39e6d308c542a80fb70d19df3ae
+      internalID: -333257523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_33
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 7
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb0b3b2fceaf4041882901f327e29e2
+      internalID: 724998271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_34
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 13
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a293384886230564d8f6276b026bbdd0
+      internalID: 1417939363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_35
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 17
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3607788318e99a444b85adf0418fe655
+      internalID: 1233012646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_36
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 19
+        width: 48
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1616429840da9d44e92e5ab586f4220d
+      internalID: -215348953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Equipment pixel by rrhk327 on DeviantArt_37
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 17
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3cb1980e4383e04aa95cb278570a30a
+      internalID: -732893931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Equipment pixel by rrhk327 on DeviantArt_32: -333257523
+      Equipment pixel by rrhk327 on DeviantArt_23: 2126835891
+      Equipment pixel by rrhk327 on DeviantArt_14: -816948652
+      Equipment pixel by rrhk327 on DeviantArt_4: 1116008037
+      Equipment pixel by rrhk327 on DeviantArt_37: -732893931
+      Equipment pixel by rrhk327 on DeviantArt_7: 1277887715
+      Equipment pixel by rrhk327 on DeviantArt_9: -2080819416
+      Equipment pixel by rrhk327 on DeviantArt_24: 989550288
+      Equipment pixel by rrhk327 on DeviantArt_27: 474538739
+      Equipment pixel by rrhk327 on DeviantArt_1: -2036071320
+      Equipment pixel by rrhk327 on DeviantArt_35: 1233012646
+      Equipment pixel by rrhk327 on DeviantArt_19: -1841129089
+      Equipment pixel by rrhk327 on DeviantArt_10: -362042105
+      Equipment pixel by rrhk327 on DeviantArt_2: 213870486
+      Equipment pixel by rrhk327 on DeviantArt_8: 1259264541
+      Equipment pixel by rrhk327 on DeviantArt_26: -1784835554
+      Equipment pixel by rrhk327 on DeviantArt_28: -1406354902
+      Equipment pixel by rrhk327 on DeviantArt_30: -759227843
+      Equipment pixel by rrhk327 on DeviantArt_33: 724998271
+      Equipment pixel by rrhk327 on DeviantArt_11: 1488712626
+      Equipment pixel by rrhk327 on DeviantArt_31: 1186981324
+      Equipment pixel by rrhk327 on DeviantArt_36: -215348953
+      Equipment pixel by rrhk327 on DeviantArt_22: -197239845
+      Equipment pixel by rrhk327 on DeviantArt_5: -1139128158
+      Equipment pixel by rrhk327 on DeviantArt_12: -1354969583
+      Equipment pixel by rrhk327 on DeviantArt_3: 200617110
+      Equipment pixel by rrhk327 on DeviantArt_13: 1033432483
+      Equipment pixel by rrhk327 on DeviantArt_6: -1130817184
+      Equipment pixel by rrhk327 on DeviantArt_17: -1649924972
+      Equipment pixel by rrhk327 on DeviantArt_25: 1905593906
+      Equipment pixel by rrhk327 on DeviantArt_29: 1461665965
+      Equipment pixel by rrhk327 on DeviantArt_15: 875648749
+      Equipment pixel by rrhk327 on DeviantArt_21: -1753186780
+      Equipment pixel by rrhk327 on DeviantArt_34: 1417939363
+      Equipment pixel by rrhk327 on DeviantArt_0: -1002996242
+      Equipment pixel by rrhk327 on DeviantArt_18: 980683450
+      Equipment pixel by rrhk327 on DeviantArt_16: 316865415
+      Equipment pixel by rrhk327 on DeviantArt_20: 1872650452
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
