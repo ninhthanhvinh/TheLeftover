@@ -19,6 +19,10 @@ MonoBehaviour:
   data:
     name: 
     Id: 4
-    buffs: []
+    buffs:
+    - attributes: 0
+      value: 0
+      min: -8
+      max: -4
   characterDisplay: {fileID: 8706077362548753715, guid: 3475e0c70ed6c7f4ea97696d54b6c4f9,
     type: 3}

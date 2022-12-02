@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager GM;
+
     public static bool isPaused = false;
     public static bool isEnded = false;
     public GameObject pauseMenuUI;
@@ -15,11 +17,24 @@ public class GameManager : MonoBehaviour
     public InventoryObject inventory;
     public InventoryObject equipment;
 
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        if(GM == null)
+        {
+            GM = GameObject.FindGameObjectWithTag("GM").GetComponent<GameManager>();
+        }
+    }
+
     private void Start()
     {
         time = 600f;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         point = GameObject.FindGameObjectWithTag("WinPoint").transform;
+        audioManager = AudioManager.instance;
+        if (audioManager == null)
+            Debug.LogError("FREAK OUT!!! No audioManager found in this scene.");
     }
     // Update is called once per frame
     void Update()
@@ -51,6 +66,7 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        audioManager.PlaySound("BGM");
     }
 
     public void Pause()

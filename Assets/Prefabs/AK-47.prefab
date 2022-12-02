@@ -134,8 +134,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRate: 0.25
   bullet: {fileID: 1428526148784072511, guid: fd6accf15d3dd3843956db12d96410e6, type: 3}
-  reloadTime: 2.5
+  reloadTime: 3
   bulletsInAMagazine: 30
+  soundName: AKSound
+  reloadSoundName: AKReloadSound
 --- !u!114 &5074085714015608969
 MonoBehaviour:
   m_ObjectHideFlags: 0

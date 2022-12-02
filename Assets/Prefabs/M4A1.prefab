@@ -31,8 +31,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4834910173835395028, guid: eabf5c03d4751934f988601516540264,
         type: 3}
+      propertyPath: soundName
+      value: M4ShootSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834910173835395028, guid: eabf5c03d4751934f988601516540264,
+        type: 3}
       propertyPath: reloadTime
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4834910173835395028, guid: eabf5c03d4751934f988601516540264,
+        type: 3}
+      propertyPath: reloadSoundName
+      value: M4ReloadSound
       objectReference: {fileID: 0}
     - target: {fileID: 4834910173835395028, guid: eabf5c03d4751934f988601516540264,
         type: 3}

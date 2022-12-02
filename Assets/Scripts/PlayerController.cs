@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //public MouseItem mouseItem = new MouseItem();
+    public float baseMovementSpeed = 3f;
     public float movementSpeed = 3f;
-    
+
     public float maxHealth;
     public float currentHealth;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     private Transform armorPosition;
     private Transform helmet;
     private Transform armor;
+    private AudioManager audioManager;
 
     Vector2 movement;
 
@@ -26,12 +28,15 @@ public class PlayerController : MonoBehaviour
     public InventoryObject equipment;
 
     public Attribute[] attributes;
+    public float originMaxHealth;
+
     void Start()
     {
         helmetPosition = GameObject.Find("Head").transform;
         armorPosition = GameObject.Find("Chest").transform;
-        maxHealth = 100;
+        maxHealth = originMaxHealth;
         currentHealth = maxHealth;
+        movementSpeed = baseMovementSpeed;
         for (int i = 0; i < attributes.Length; i++)
         {
             attributes[i].SetParent(this);
@@ -41,6 +46,8 @@ public class PlayerController : MonoBehaviour
             equipment.GetSlots[i].OnBeforeUpdate += OnBeforeSlotUpdate;
             equipment.GetSlots[i].OnAfterUpdate += OnAfterSlotUpdate;
         }
+
+        audioManager = AudioManager.instance;
     }
 
     public void OnBeforeSlotUpdate(InventorySlot _slot)
@@ -174,11 +181,27 @@ public class PlayerController : MonoBehaviour
         {
             FindObjectOfType<GameManager>().EndGame();
         }
+
+        for (int i = 0; i < attributes.Length; i++)
+        {
+            if(attributes[i].type == Attributes.Stamina)
+            {
+                maxHealth = originMaxHealth + (int)attributes[i].value.ModifiedValue * 1f;
+            }
+            else if (attributes[i].type == Attributes.Agility)
+            {
+                movementSpeed = baseMovementSpeed + (float)attributes[i].value.ModifiedValue / 100 * baseMovementSpeed;
+            }
+
+
+        }
     }
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * movementSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + movementSpeed * Time.fixedDeltaTime * movement);
+        if(movement.magnitude >0.01f)
+            audioManager.PlaySound("FootstepOnGrass");
     }
 
 

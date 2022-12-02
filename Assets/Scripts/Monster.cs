@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Monster : MonoBehaviour
 {
-    public float maxHealthPoint = 100;
+    public float maxHealthPoint;
     public float currentHealthPoint;
     public float speed;
 

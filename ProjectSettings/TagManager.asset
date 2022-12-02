@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - WinPoint
   - Trigger
+  - GM
   layers:
   - Default
   - TransparentFX

@@ -7,7 +7,7 @@ using System;
 
 public class PlayerShootingProjectiles : MonoBehaviour
 {
-
+    private AudioManager audioManager;
     private Transform pfBullet;
     private GunController gun;
     [SerializeField] private Transform pfBulletPhysics;
@@ -15,8 +15,8 @@ public class PlayerShootingProjectiles : MonoBehaviour
     private void Start()
     {
         gun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<GunController>();
-        Debug.Log(GameObject.FindGameObjectWithTag("Weapon"));
         pfBullet = gun.bullet.transform;
+        audioManager = AudioManager.instance;
     }
 
     private void Awake()
@@ -35,6 +35,7 @@ public class PlayerShootingProjectiles : MonoBehaviour
         Vector3 shootDir = (e.shootPosition - e.gunEndPointPosition).normalized;
         bulletTransform.GetComponent<Bullet>().Setup(shootDir);
 
+        audioManager.PlaySound(gun.soundName);
 
         /*Transform bulletTransform = Instantiate(pfBulletPhysics, e.gunEndPointPosition, Quaternion.identity);
 

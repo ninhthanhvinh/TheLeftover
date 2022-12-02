@@ -9,6 +9,7 @@ public class PlayerAimWeapon : MonoBehaviour
     private Transform aimTransform;
     private Transform aimGunEndPointPosition;
     private GameObject inventoryInterface;
+    private new AudioManager audio;
 
     private float fireRate;
     private float nextFire = 0f;
@@ -21,6 +22,11 @@ public class PlayerAimWeapon : MonoBehaviour
     {
         public Vector3 gunEndPointPosition;
         public Vector3 shootPosition;
+    }
+
+    private void Start()
+    {
+        audio = AudioManager.instance;
     }
 
     //private Animator aimAnimator;
@@ -87,8 +93,10 @@ public class PlayerAimWeapon : MonoBehaviour
 
     IEnumerator FireCooldown(float time)
     {
-        yield return new WaitForSeconds(time);
+        audio.PlaySound(gun.reloadSoundName);
         Debug.Log("Reloading");
+        yield return new WaitForSeconds(time);
+        
         allowFire = true;
     }
 
