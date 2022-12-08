@@ -84,6 +84,60 @@ public abstract class UserInterface : MonoBehaviour
                 item.RemoveItem();
                 Debug.Log(string.Concat("Healing", healGen));
             }
+
+            else if (item.ItemObject.type == ItemType.Weapon)
+            {
+                var equipSlot = GameObject.Find("Equipment Screen").GetComponent<StaticInterface>();
+                if (equipSlot.slotsOnInterface[equipSlot.slots[2]].ItemObject == null)
+                {
+                    equipSlot.slotsOnInterface[equipSlot.slots[2]].UpdateSlot(item.ItemObject.data, 1);
+                    item.RemoveItem();
+                }
+
+                else
+                {
+                    var temp = equipSlot.slotsOnInterface[equipSlot.slots[2]].ItemObject;
+                    equipSlot.slotsOnInterface[equipSlot.slots[2]].UpdateSlot(item.ItemObject.data, 1);
+                    item.RemoveItem();
+                    item.UpdateSlot(temp.data, 1);
+                }
+            }
+
+            else if (item.ItemObject.type == ItemType.Helmet)
+            {
+                var equipSlot = GameObject.Find("Equipment Screen").GetComponent<StaticInterface>();
+                if (equipSlot.slotsOnInterface[equipSlot.slots[0]].ItemObject == null)
+                {
+                    equipSlot.slotsOnInterface[equipSlot.slots[0]].UpdateSlot(item.ItemObject.data, 1);
+                    item.RemoveItem();
+                }
+
+                else
+                {
+                    var temp = equipSlot.slotsOnInterface[equipSlot.slots[0]].ItemObject;
+                    equipSlot.slotsOnInterface[equipSlot.slots[0]].UpdateSlot(item.ItemObject.data, 1);
+                    item.RemoveItem();
+                    item.UpdateSlot(temp.data, 1);
+                }
+            }
+
+            else if (item.ItemObject.type == ItemType.Armor)
+            {
+                var equipSlot = GameObject.Find("Equipment Screen").GetComponent<StaticInterface>();
+                if (equipSlot.slotsOnInterface[equipSlot.slots[1]].ItemObject == null)
+                {
+                    equipSlot.slotsOnInterface[equipSlot.slots[1]].UpdateSlot(item.ItemObject.data, 1);
+                    item.RemoveItem();
+                }
+
+                else
+                {
+                    var temp = equipSlot.slotsOnInterface[equipSlot.slots[1]].ItemObject;
+                    equipSlot.slotsOnInterface[equipSlot.slots[1]].UpdateSlot(item.ItemObject.data, 1);
+                    item.RemoveItem();
+                    item.UpdateSlot(temp.data, 1);
+                }
+            }
         }
 
     }

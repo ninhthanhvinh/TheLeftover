@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
 
+    public HealthBar healthBar;
+
     private Transform gunPosition;
     private Transform helmetPosition;
     private Transform armorPosition;
@@ -195,6 +197,8 @@ public class PlayerController : MonoBehaviour
 
 
         }
+
+        healthBar.SetSize(currentHealth / maxHealth);
     }
 
     void FixedUpdate()

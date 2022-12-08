@@ -30,6 +30,8 @@ public class MageEnemy : Monster
     private float intTimer;
     #endregion
 
+    private HealthBar healthBar;
+
     private void Awake()
     {
         intTimer = timer;
@@ -79,7 +81,8 @@ public class MageEnemy : Monster
         currentHealthPoint = maxHealthPoint;
         mage = GetComponent<Transform>();
         anim = GetComponent<Animator>();
-        
+        healthBar = transform.GetComponentInChildren<HealthBar>();
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -102,32 +105,40 @@ public class MageEnemy : Monster
             anim.SetBool("RangeAttack", false);
             anim.SetBool("isDead", true);
         }
+
+        healthBar.SetSize(currentHealthPoint / maxHealthPoint);
     }
 
     void EnemyLogic()
     {
-        if (target != null)
-            distance = Vector2.Distance(transform.position, target.transform.position);
-
-        if (distance < attackDistance && Mathf.Abs(transform.position.y - target.transform.position.y) < 0.5f)
+        if (target == null)
         {
-            Attacking();
+            var tempTarget = GameObject.FindGameObjectWithTag("Player");
+            Move(tempTarget);
         }
-        
         else
         {
-            Move();
-            StopAttack();
-        }
+            distance = Vector2.Distance(transform.position, target.transform.position);
+            if (distance < attackDistance && Mathf.Abs(transform.position.y - target.transform.position.y) < 0.25f)
+            {
+                Attacking();
+            }
 
-        if (cooling)
-        {
-            Cooldown();
-            anim.SetBool("MeleeAttack", false);
+            else
+            {
+                Move(target);
+                StopAttack();
+            }
+
+            if (cooling)
+            {
+                Cooldown();
+                anim.SetBool("MeleeAttack", false);
+            }
         }
     }
 
-    void Move()
+    void Move(GameObject target)
     {
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("MeleeAttack"))
         {

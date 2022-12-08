@@ -12,7 +12,14 @@ public class PlayerShootingProjectiles : MonoBehaviour
     private GunController gun;
     [SerializeField] private Transform pfBulletPhysics;
 
-    private void Start()
+    //private void Start()
+    //{
+    //    gun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<GunController>();
+    //    pfBullet = gun.bullet.transform;
+    //    audioManager = AudioManager.instance;
+    //}
+
+    private void Update()
     {
         gun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<GunController>();
         pfBullet = gun.bullet.transform;

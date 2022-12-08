@@ -71,21 +71,3 @@ MonoBehaviour:
         Id: -1
         buffs: []
       amount: 0
-    - allowedItems: 
-      item:
-        name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - allowedItems: 
-      item:
-        name: 
-        Id: -1
-        buffs: []
-      amount: 0
-    - allowedItems: 
-      item:
-        name: 
-        Id: -1
-        buffs: []
-      amount: 0

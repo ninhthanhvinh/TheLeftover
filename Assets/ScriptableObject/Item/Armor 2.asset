@@ -21,8 +21,8 @@ MonoBehaviour:
     Id: 7
     buffs:
     - attributes: 2
-      value: 10
-      min: 10
-      max: 0
+      value: 0
+      min: 0
+      max: 10
   characterDisplay: {fileID: 1962195919748657167, guid: cf85dc5ec8572224d9c1943ae8c59189,
     type: 3}

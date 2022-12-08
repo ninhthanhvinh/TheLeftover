@@ -36,7 +36,6 @@ public class PlayerAimWeapon : MonoBehaviour
 
         aimTransform = GameObject.FindGameObjectWithTag("Weapon").transform;
         aimGunEndPointPosition = aimTransform.Find("GunEndPointPosition");
-        Debug.Log(aimTransform);
         gun = aimTransform.GetComponent<GunController>();
         fireRate = gun.fireRate;
         //aimAnimator = aimTransform.GetComponent<Animator>();
@@ -44,6 +43,13 @@ public class PlayerAimWeapon : MonoBehaviour
 
     private void Update()
     {
+        if(aimTransform == null)
+        {
+            aimTransform = GameObject.FindGameObjectWithTag("Weapon").transform;
+            aimGunEndPointPosition = aimTransform.Find("GunEndPointPosition");
+            gun = aimTransform.GetComponent<GunController>();
+            fireRate = gun.fireRate;
+        }
         HandleAiming();
         HandleShooting();
     }
@@ -56,13 +62,22 @@ public class PlayerAimWeapon : MonoBehaviour
 
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         if (aimTransform != null)
-            aimTransform.eulerAngles = new Vector3(0, 0, angle);
+            if (angle <= 90 && angle >= -90)
+            {
+                aimTransform.GetComponentInChildren<SpriteRenderer>().flipY = false;
+                aimTransform.eulerAngles = new Vector3(0, 0, angle);
+            }
+            else
+            {
+                aimTransform.GetComponentInChildren<SpriteRenderer>().flipY = true;
+                aimTransform.eulerAngles = new Vector3(0, 0, angle);
+            }
     }
 
     private void HandleShooting()
     {
 
-        if (Input.GetMouseButton(0) && Time.time > nextFire && !inventoryInterface.activeSelf && allowFire)
+        if (Input.GetMouseButton(0) && Time.time > nextFire /*&& !inventoryInterface.activeSelf*/ && allowFire)
         {
             //aimAnimator.SetTrigger("Shoot");
 

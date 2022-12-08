@@ -12,13 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11896cdb5f3b4241be2f593bb2cff54, type: 3}
   m_Name: Medkit
   m_EditorClassIdentifier: 
-  uiDisplay: {fileID: 21300000, guid: fbb108ca9ae39704c94c4c6321df3d1a, type: 3}
+  uiDisplay: {fileID: 21300000, guid: 17b295b187a657243b382c8f8330efdf, type: 3}
   stackable: 0
   type: 0
   description: 
   data:
     name: 
     Id: 5
-    buffs: []
+    buffs:
+    - attributes: 4
+      value: 0
+      min: 20
+      max: 30
   characterDisplay: {fileID: 6784059696202584687, guid: 9335255a72c74cc4c958fe37f1c803d1,
     type: 3}

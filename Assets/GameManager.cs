@@ -16,8 +16,13 @@ public class GameManager : MonoBehaviour
     public Transform point;
     public InventoryObject inventory;
     public InventoryObject equipment;
+    public float waveSpawnCooldown = 10f;
+    public GameObject[] spawnPoints;
+    public GameObject[] enemiesPrefabs;
+    public GameObject healthbarUI;
 
     private AudioManager audioManager;
+    int enemiesSpawnThisWave;
 
     private void Awake()
     {
@@ -46,6 +51,22 @@ public class GameManager : MonoBehaviour
             else
                 Pause();
         }
+
+        waveSpawnCooldown -= Time.deltaTime;
+        if(waveSpawnCooldown <= 0)
+        {
+            enemiesSpawnThisWave += 2;
+            SpawnEnemies(enemiesSpawnThisWave);
+            waveSpawnCooldown = 10f;
+        }
+    }
+
+    private void SpawnEnemies(int _enemySpawnThisWay)
+    {
+        for (int i = 0; i < Random.Range(4, _enemySpawnThisWay + 4); i++)
+        {
+            Instantiate(enemiesPrefabs[0], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
+        }
     }
 
     private void FixedUpdate()
@@ -67,6 +88,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
         audioManager.PlaySound("BGM");
+        healthbarUI.SetActive(true);
     }
 
     public void Pause()
@@ -74,6 +96,7 @@ public class GameManager : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        healthbarUI.SetActive(false);
     }
 
     public void LoadMenu()
@@ -95,6 +118,7 @@ public class GameManager : MonoBehaviour
             isEnded = true;
             Time.timeScale = 0f;
             endgameMenuUI.SetActive(true);
+            healthbarUI.SetActive(false);
         }
     }
 
@@ -108,6 +132,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         Debug.Log("congratulations");
+        healthbarUI.SetActive(false);
     }
 
     public void LoadInv()
