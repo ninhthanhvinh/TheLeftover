@@ -138,6 +138,7 @@ MonoBehaviour:
   bulletsInAMagazine: 30
   soundName: AKSound
   reloadSoundName: AKReloadSound
+  bulletsPerTap: 1
 --- !u!114 &5074085714015608969
 MonoBehaviour:
   m_ObjectHideFlags: 0

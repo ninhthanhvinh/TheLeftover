@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey;
 using CodeMonkey.Utils;
-using System;
 
 public class PlayerShootingProjectiles : MonoBehaviour
 {
@@ -18,7 +17,6 @@ public class PlayerShootingProjectiles : MonoBehaviour
     //    pfBullet = gun.bullet.transform;
     //    audioManager = AudioManager.instance;
     //}
-
     private void Update()
     {
         gun = GameObject.FindGameObjectWithTag("Weapon").GetComponent<GunController>();
@@ -35,7 +33,6 @@ public class PlayerShootingProjectiles : MonoBehaviour
     {
         /*Vector3 shootDir = (e.shootPosition - e.gunEndPointPosition).normalized;
         Raycast2DShooting.Shoot(e.gunEndPointPosition, shootDir);*/
-
 
         Transform bulletTransform = Instantiate(pfBullet, Vector3.zero, Quaternion.identity);
         bulletTransform.position = e.gunEndPointPosition;

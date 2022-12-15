@@ -14,6 +14,7 @@ public class PlayerAimWeapon : MonoBehaviour
     private float fireRate;
     private float nextFire = 0f;
     private bool allowFire = true;
+    private int bulletsPerTap;
     private int count = 0;
     public event EventHandler<OnShootEventArgs> OnShoot;
     private GunController gun;
@@ -34,10 +35,10 @@ public class PlayerAimWeapon : MonoBehaviour
     {
         inventoryInterface = GameObject.Find("InventoryScreen");
 
-        aimTransform = GameObject.FindGameObjectWithTag("Weapon").transform;
-        aimGunEndPointPosition = aimTransform.Find("GunEndPointPosition");
-        gun = aimTransform.GetComponent<GunController>();
-        fireRate = gun.fireRate;
+        //aimTransform = GameObject.FindGameObjectWithTag("Weapon").transform;
+        //aimGunEndPointPosition = aimTransform.Find("GunEndPointPosition");
+        //gun = aimTransform.GetComponent<GunController>();
+        //fireRate = gun.fireRate;
         //aimAnimator = aimTransform.GetComponent<Animator>();
     }
 
@@ -49,6 +50,7 @@ public class PlayerAimWeapon : MonoBehaviour
             aimGunEndPointPosition = aimTransform.Find("GunEndPointPosition");
             gun = aimTransform.GetComponent<GunController>();
             fireRate = gun.fireRate;
+            bulletsPerTap = gun.bulletsPerTap;
         }
         HandleAiming();
         HandleShooting();
@@ -86,12 +88,20 @@ public class PlayerAimWeapon : MonoBehaviour
             {
                 Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
 
-
-                OnShoot?.Invoke(this, new OnShootEventArgs
+                for (int i = 0; i < bulletsPerTap; i++)
                 {
-                    gunEndPointPosition = aimGunEndPointPosition.position,
-                    shootPosition = mousePosition
-                });
+                    OnShoot?.Invoke(this, new OnShootEventArgs
+                    {
+                        gunEndPointPosition = aimGunEndPointPosition.position,
+                        shootPosition = mousePosition
+                    });
+                }
+
+                //OnShoot?.Invoke(this, new OnShootEventArgs
+                //{
+                //    gunEndPointPosition = aimGunEndPointPosition.position,
+                //    shootPosition = mousePosition
+                //});
                 count++;
             }
             else

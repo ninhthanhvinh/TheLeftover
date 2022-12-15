@@ -9,13 +9,18 @@ public class Bullet : MonoBehaviour
     public float bulletDamage;
     public float bulletSpeed;
 
+    [SerializeField]
+    private int spread;
+
     private void Start()
     {
         bulletDamage = 30f;
     }
     public void Setup(Vector3 shootDir)
     {
+        float y = Random.Range(-spread, spread);
         this.shootDir = shootDir;
+        this.shootDir.y += y;
         transform.eulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(shootDir));
         Destroy(gameObject, 5f);
     }

@@ -12,4 +12,5 @@ public class GunController : MonoBehaviour
     public float bulletsInAMagazine;
     public string soundName;
     public string reloadSoundName;
+    public int bulletsPerTap;
 }

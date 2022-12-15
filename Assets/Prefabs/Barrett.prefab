@@ -138,6 +138,7 @@ MonoBehaviour:
   bulletsInAMagazine: 10
   soundName: BarrettShootSound
   reloadSoundName: BarrettReloadSound
+  bulletsPerTap: 1
 --- !u!114 &5074085714015608969
 MonoBehaviour:
   m_ObjectHideFlags: 0
