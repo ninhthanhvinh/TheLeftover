@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BeginScene.unity
+    guid: 3cf04e995d2ba674fa6ca54af7e11b7e
+  - enabled: 1
+    path: Assets/Cainos/Pixel Art Top Down - Basic/Scene/GameScene.unity
+    guid: 86e89bd9e4a9c5245a015cf17e3c0aae
+  - enabled: 1
+    path: Assets/Scenes/GrassLand.unity
+    guid: b91b03bb5e5db9641a7b82bdb96e44f7
   m_configObjects: {}

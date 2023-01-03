@@ -197,7 +197,6 @@ public class PlayerController : MonoBehaviour
 
 
         }
-
         healthBar.SetSize(currentHealth / maxHealth);
     }
 

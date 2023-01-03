@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager instance;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -22,11 +24,10 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("isOpen", true);
-        
+        Time.timeScale = 0f;
         nameText.text = dialogue.name;
         
         sentences.Clear();
-
         foreach (string sentence in dialogue.sentences)
         {
             sentences.Enqueue(sentence);
@@ -59,6 +60,8 @@ public class DialogueManager : MonoBehaviour
     }
     void EndDialogue()
     {
+        Time.timeScale = 1f;
         animator.SetBool("isOpen", false);
+        Debug.Log("endd");
     }
 }

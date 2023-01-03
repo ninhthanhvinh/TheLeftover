@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public static bool isEnded = false;
     public GameObject pauseMenuUI;
     public GameObject endgameMenuUI;
+    public GameObject completeSceneUI;
     public static float time;
     public Transform player;
     public Transform point;
@@ -20,8 +21,10 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnPoints;
     public GameObject[] enemiesPrefabs;
     public GameObject healthbarUI;
+    public DialogueTrigger dialogue;
 
     private AudioManager audioManager;
+    public DialogueManager dialogueManager;
     int enemiesSpawnThisWave;
 
     private void Awake()
@@ -34,9 +37,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        time = 600f;
+        time = 10f;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         point = GameObject.FindGameObjectWithTag("WinPoint").transform;
+        //dialogueManager = DialogueManager.instance;
         audioManager = AudioManager.instance;
         if (audioManager == null)
             Debug.LogError("FREAK OUT!!! No audioManager found in this scene.");
@@ -61,6 +65,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void CallDialogue(DialogueTrigger trigger)
+    {
+        if (!trigger.isCalled)
+        {
+            dialogueManager.StartDialogue(trigger.dialogue);
+            trigger.isCalled = true;
+        }
+
+    }
+
     private void SpawnEnemies(int _enemySpawnThisWay)
     {
         for (int i = 0; i < Random.Range(4, _enemySpawnThisWay + 4); i++)
@@ -72,7 +86,13 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         time -= Time.fixedDeltaTime;
-        var distance = Vector3.Distance(player.position, point.position); 
+        var distance = Vector3.Distance(player.position, point.position);
+
+        if (time <= 240f)
+        {
+            CallDialogue(dialogue);
+        }
+        
         if (time <= 0)
         {
             if (distance < 20f)
@@ -130,13 +150,23 @@ public class GameManager : MonoBehaviour
 
     public void CompleteGame()
     {
-        Time.timeScale = 0f;
-        Debug.Log("congratulations");
-        healthbarUI.SetActive(false);
+        if (!isEnded)
+        {
+            isEnded = true;
+            Time.timeScale = 0f;
+            completeSceneUI.SetActive(true);
+            healthbarUI.SetActive(false);
+        }
     }
 
     public void LoadInv()
     {
         inventory.Load();
+    }
+
+    public void NextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Time.timeScale = 1f;
     }
 }
