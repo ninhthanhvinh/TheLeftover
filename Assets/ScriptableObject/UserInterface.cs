@@ -18,6 +18,7 @@ public abstract class UserInterface : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<PlayerController>();
         slotsOnInterface.UpdateSlotDisplay();
+        
         for (int i = 0; i < inventory.GetSlots.Length; i++)
         {
             inventory.GetSlots[i].parent = this;
@@ -39,6 +40,7 @@ public abstract class UserInterface : MonoBehaviour
         }
         else
         {
+            
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().sprite = null;
             _slot.slotDisplay.transform.GetChild(0).GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0);
             _slot.slotDisplay.GetComponentInChildren<TextMeshProUGUI>().text = "";

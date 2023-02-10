@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d265eef10b9837458e0f1dcd41684d5, type: 3}
   m_Name: Scene2Inventory
   m_EditorClassIdentifier: 
-  savePath: /inventory.save
+  savePath: /inventory.save2
   database: {fileID: 11400000, guid: f9692fae4e2da8d409e7e04f0f9d603c, type: 2}
   type: 0
   Container:
@@ -23,51 +23,60 @@ MonoBehaviour:
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0
     - allowedItems: 
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
+      name: 0

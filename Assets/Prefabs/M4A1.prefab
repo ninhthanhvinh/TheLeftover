@@ -116,6 +116,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5074085714015608969, guid: eabf5c03d4751934f988601516540264,
         type: 3}
+      propertyPath: flash
+      value: 
+      objectReference: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b,
+        type: 3}
+    - target: {fileID: 5074085714015608969, guid: eabf5c03d4751934f988601516540264,
+        type: 3}
       propertyPath: pfBulletPhysics
       value: 
       objectReference: {fileID: 5254962557173900420, guid: 58ea027ffee85b449ada8989217300c0,

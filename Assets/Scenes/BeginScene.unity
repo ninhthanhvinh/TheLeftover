@@ -317,6 +317,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1019650107}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: NextScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &122116591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +388,7 @@ MonoBehaviour:
     - "Di chuy\u1EC3n b\u1EB1ng c\xE1c ph\xEDm WASD, t\u1EA5n c\xF4ng b\u1EB1ng LeftMouse,
       h\xE3y thu l\u01B0\u1EE3m v\xE0 s\u1EED d\u1EE5ng th\u1EADt t\u1ED1t v\u0169
       kh\xED c\u1EE7a m\xECnh."
+  isCalled: 0
 --- !u!1 &275533543
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,13 +546,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1019650108}
   - component: {fileID: 1019650107}
+  - component: {fileID: 1019650109}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1019650107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
   endgameMenuUI: {fileID: 0}
+  completeSceneUI: {fileID: 0}
   player: {fileID: 0}
   point: {fileID: 0}
   inventory: {fileID: 0}
@@ -562,6 +577,8 @@ MonoBehaviour:
   spawnPoints: []
   enemiesPrefabs: []
   healthbarUI: {fileID: 0}
+  dialogue: {fileID: 0}
+  dialogueManager: {fileID: 0}
 --- !u!4 &1019650108
 Transform:
   m_ObjectHideFlags: 0
@@ -577,6 +594,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1019650109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019650106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0823a43a500092348a36682e410a4887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds: []
 --- !u!1 &1089031323
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +692,7 @@ MonoBehaviour:
     - "Di chuy\u1EC3n b\u1EB1ng c\xE1c ph\xEDm WASD, t\u1EA5n c\xF4ng b\u1EB1ng LeftMouse,
       h\xE3y thu l\u01B0\u1EE3m v\xE0 s\u1EED d\u1EE5ng th\u1EADt t\u1ED1t v\u0169
       kh\xED c\u1EE7a m\xECnh."
+  isCalled: 0
 --- !u!4 &1131937792
 Transform:
   m_ObjectHideFlags: 0

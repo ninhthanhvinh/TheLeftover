@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour
                 case ItemType.Food:
                     break;
                 case ItemType.Weapon:
+                    Debug.Log(_slot.ItemObject.characterDisplay);
                     gunPosition = Instantiate(_slot.ItemObject.characterDisplay, transform.position, Quaternion.identity, transform).transform;
                     break;
                 case ItemType.Helmet:
@@ -249,6 +250,28 @@ public class PlayerController : MonoBehaviour
         currentHealth += healthRegen;
         if (currentHealth >= maxHealth) 
             currentHealth = maxHealth;
+    }
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+        inventory.Save();
+        equipment.Save();
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        currentHealth = data.health;
+        inventory.Load();
+        equipment.Load();
+    }
+
+    public void ClearInventory()
+    {
+        inventory.Clear();
+        equipment.Clear();
+
     }
 }
 

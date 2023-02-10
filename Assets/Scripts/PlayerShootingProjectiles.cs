@@ -10,6 +10,8 @@ public class PlayerShootingProjectiles : MonoBehaviour
     private Transform pfBullet;
     private GunController gun;
     [SerializeField] private Transform pfBulletPhysics;
+    [SerializeField] private GameObject flash;
+
 
     //private void Start()
     //{
@@ -36,9 +38,13 @@ public class PlayerShootingProjectiles : MonoBehaviour
 
         Transform bulletTransform = Instantiate(pfBullet, Vector3.zero, Quaternion.identity);
         bulletTransform.position = e.gunEndPointPosition;
+        Transform flashbang = Instantiate(flash, Vector3.zero, Quaternion.identity).transform;
+        flashbang.position = e.gunEndPointPosition;
         Vector3 shootDir = (e.shootPosition - e.gunEndPointPosition).normalized;
-        bulletTransform.GetComponent<Bullet>().Setup(shootDir);
-
+        if(bulletTransform.GetComponent<ExplosionBullet>() != null)
+            bulletTransform.GetComponent<ExplosionBullet>().Setup(shootDir);
+        else
+            bulletTransform.GetComponent<Bullet>().Setup(shootDir);
         audioManager.PlaySound(gun.soundName);
 
         /*Transform bulletTransform = Instantiate(pfBulletPhysics, e.gunEndPointPosition, Quaternion.identity);

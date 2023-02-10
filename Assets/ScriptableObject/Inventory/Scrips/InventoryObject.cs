@@ -168,6 +168,7 @@ public class InventorySlot
     public SlotUpdate OnBeforeUpdate;
     public Item item = new();
     public int amount;
+    public int name;
 
     public ItemObject ItemObject
     {

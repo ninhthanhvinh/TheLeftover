@@ -15,8 +15,6 @@ public class GameManager : MonoBehaviour
     public static float time;
     public Transform player;
     public Transform point;
-    public InventoryObject inventory;
-    public InventoryObject equipment;
     public float waveSpawnCooldown = 10f;
     public GameObject[] spawnPoints;
     public GameObject[] enemiesPrefabs;
@@ -26,6 +24,7 @@ public class GameManager : MonoBehaviour
     private AudioManager audioManager;
     public DialogueManager dialogueManager;
     int enemiesSpawnThisWave;
+    int currentSceneIndex;
 
     private void Awake()
     {
@@ -37,17 +36,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        time = 10f;
+        time = 30f;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         point = GameObject.FindGameObjectWithTag("WinPoint").transform;
-        //dialogueManager = DialogueManager.instance;
+        dialogueManager = DialogueManager.instance;
         audioManager = AudioManager.instance;
         if (audioManager == null)
             Debug.LogError("FREAK OUT!!! No audioManager found in this scene.");
+
     }
     // Update is called once per frame
+
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -60,9 +62,11 @@ public class GameManager : MonoBehaviour
         if(waveSpawnCooldown <= 0)
         {
             enemiesSpawnThisWave += 2;
-            SpawnEnemies(enemiesSpawnThisWave);
+            //SpawnEnemies(enemiesSpawnThisWave);
             waveSpawnCooldown = 10f;
         }
+
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     void CallDialogue(DialogueTrigger trigger)
@@ -86,11 +90,12 @@ public class GameManager : MonoBehaviour
     private void FixedUpdate()
     {
         time -= Time.fixedDeltaTime;
+        if(point == null) point = GameObject.FindGameObjectWithTag("WinPoint").transform;
         var distance = Vector3.Distance(player.position, point.position);
 
         if (time <= 240f)
         {
-            CallDialogue(dialogue);
+            //CallDialogue(dialogue);
         }
         
         if (time <= 0)
@@ -159,14 +164,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void LoadInv()
-    {
-        inventory.Load();
-    }
-
     public void NextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        player.GetComponent<PlayerController>().SavePlayer();
+        SceneManager.LoadSceneAsync(currentSceneIndex + 1, LoadSceneMode.Single);
         Time.timeScale = 1f;
+        completeSceneUI.SetActive(false);
+        player.GetComponent<PlayerController>().LoadPlayer();
     }
 }

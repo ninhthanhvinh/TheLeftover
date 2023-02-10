@@ -62,6 +62,5 @@ public class DialogueManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         animator.SetBool("isOpen", false);
-        Debug.Log("endd");
     }
 }

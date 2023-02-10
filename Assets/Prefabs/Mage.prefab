@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3180194006984921181}
   - component: {fileID: 3180194006984921180}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3180194007449246644}
   - component: {fileID: 3180194007449246645}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3180194007527413738}
   - component: {fileID: 3180194007527413737}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: triggerArea
   m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -199,7 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3180194007586247558}
   - component: {fileID: 3180194007586247557}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: hitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 3180194007762024911}
   - component: {fileID: 3180194007762024915}
   - component: {fileID: 3180194007762024914}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Mage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3180194007945090139}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3180194007992708057}
   - component: {fileID: 3180194007992708056}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: BarSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +556,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3180194008306690399}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: raycast
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -588,7 +588,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3180194008611715624}
   - component: {fileID: 3180194008611715631}
-  m_Layer: 0
+  m_Layer: 28
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
