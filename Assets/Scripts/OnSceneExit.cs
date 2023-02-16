@@ -6,9 +6,16 @@ using UnityEngine.SceneManagement;
 public class OnSceneExit : MonoBehaviour
 {
     public string sceneName;
+    GameManager GM;
+    private void Start()
+    {
+        GM = GameManager.GM;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(sceneName);
+        GM.NextScene();
+        //SceneManager.LoadScene(sceneName);
+        
     }
 }

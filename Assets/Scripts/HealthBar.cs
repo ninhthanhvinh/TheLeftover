@@ -15,6 +15,8 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     public void SetSize(float sizeNormalized)
     {
+        if(bar == null)
+            bar = transform.Find("Bar");
         bar.localScale = new Vector3(sizeNormalized, 1f);
     }
 }

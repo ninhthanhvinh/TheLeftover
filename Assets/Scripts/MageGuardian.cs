@@ -5,7 +5,6 @@ using UnityEngine;
 public class MageGuardian : Monster
 {
     [SerializeField]
-    private Transform player;
     private Transform mage;
     public float damage;
     private Vector3 dir;
@@ -18,7 +17,6 @@ public class MageGuardian : Monster
 
     #region Private Variables
     private GameObject target;
-    private Animator anim;
     private float distance;
     #endregion
 
@@ -34,15 +32,19 @@ public class MageGuardian : Monster
     {
         currentHealthPoint = maxHealthPoint;
         mage = GetComponent<Transform>();
-        anim = GetComponent<Animator>();
         healthBar = transform.GetComponentInChildren<HealthBar>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        dir = (player.position - mage.position);
+        
+
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player");
+        }
+        dir = (target.transform.position - mage.position);
         //if (Vector3.Distance(player.position, mage.position) < 6f) RangeAttack();
         if (dir.x > 0.01f)
         {
@@ -50,10 +52,6 @@ public class MageGuardian : Monster
         }
         else mage.GetComponent<SpriteRenderer>().flipX = false;
 
-        if (target == null)
-        {
-            target = GameObject.FindGameObjectWithTag("Player");
-        }
         distance = Vector2.Distance(transform.position, target.transform.position);
         if (distance < attackDistance && timer <= 0)
         {

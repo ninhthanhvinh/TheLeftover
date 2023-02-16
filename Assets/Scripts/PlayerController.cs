@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
             equipment.GetSlots[i].OnAfterUpdate += OnAfterSlotUpdate;
         }
 
-        audioManager = AudioManager.instance;
+        //audioManager = AudioManager.instance;
     }
 
     public void OnBeforeSlotUpdate(InventorySlot _slot)
@@ -142,7 +142,6 @@ public class PlayerController : MonoBehaviour
                 case ItemType.Food:
                     break;
                 case ItemType.Weapon:
-                    Debug.Log(_slot.ItemObject.characterDisplay);
                     gunPosition = Instantiate(_slot.ItemObject.characterDisplay, transform.position, Quaternion.identity, transform).transform;
                     break;
                 case ItemType.Helmet:
@@ -161,6 +160,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (audioManager == null)
+            audioManager = AudioManager.instance;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -182,6 +184,9 @@ public class PlayerController : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            inventory.Clear();
+            equipment.Clear();
+            //Destroy(gameObject, 1f);
             FindObjectOfType<GameManager>().EndGame();
         }
 
@@ -198,6 +203,7 @@ public class PlayerController : MonoBehaviour
 
 
         }
+        if (healthBar == null) healthBar = GameObject.Find("PlayerHealthbar").GetComponent<HealthBar>();
         healthBar.SetSize(currentHealth / maxHealth);
     }
 

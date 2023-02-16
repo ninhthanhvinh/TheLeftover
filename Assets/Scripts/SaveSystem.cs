@@ -13,7 +13,6 @@ public static class SaveSystem
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlayerData data = new PlayerData(player);
-        Debug.Log("máu trước khi lưu " + data.health);
 
         formatter.Serialize(stream, data);
         stream.Close();
@@ -30,7 +29,6 @@ public static class SaveSystem
 
             PlayerData data = formatter.Deserialize(stream) as PlayerData;
             stream.Close();
-            Debug.Log("máu sau khi lưu " + data.health);
             return data;
         }
         else

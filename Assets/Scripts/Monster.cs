@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Monster : MonoBehaviour
 {
     public float maxHealthPoint;
-    public float currentHealthPoint;
+    protected float currentHealthPoint;
     public float speed;
 
     private static List<Monster> targetList;
@@ -36,4 +36,9 @@ public abstract class Monster : MonoBehaviour
     }
 
     public abstract void Attack();
+
+    public void Healing(float healthRegen)
+    {
+        currentHealthPoint += healthRegen;
+    }
 }

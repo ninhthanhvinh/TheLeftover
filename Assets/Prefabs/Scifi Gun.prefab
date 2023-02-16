@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pfBulletPhysics: {fileID: 5254962557173900420, guid: 27a115c12e691234ca6443297721fa49,
     type: 3}
+  flash: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
 --- !u!114 &7727127411484847578
 MonoBehaviour:
   m_ObjectHideFlags: 0

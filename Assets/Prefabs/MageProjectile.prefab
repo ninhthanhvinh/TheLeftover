@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 30
-  speed: 3
+  speed: 1.5
   boom: {fileID: 5020910720569094661, guid: b9f7e06a5a2baaa4cb811b339175a48e, type: 3}
 --- !u!58 &8573345256999142571
 CircleCollider2D:

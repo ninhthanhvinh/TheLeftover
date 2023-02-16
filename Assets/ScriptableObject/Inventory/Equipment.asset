@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d265eef10b9837458e0f1dcd41684d5, type: 3}
   m_Name: Equipment
   m_EditorClassIdentifier: 
-  savePath: /equipment.Save1
+  savePath: /euipment.Save
   database: {fileID: 11400000, guid: f9692fae4e2da8d409e7e04f0f9d603c, type: 2}
-  type: 1
+  type: 0
   Container:
     Slots:
     - allowedItems: 02000000
@@ -38,14 +38,14 @@ MonoBehaviour:
         buffs: []
       amount: 0
       name: 2
-    - allowedItems: 
+    - allowedItems: 00000000
       item:
         name: 
         Id: -1
         buffs: []
       amount: 0
       name: 3
-    - allowedItems: 
+    - allowedItems: 00000000
       item:
         name: 
         Id: -1

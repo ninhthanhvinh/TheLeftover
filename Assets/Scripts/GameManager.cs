@@ -1,5 +1,6 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,20 +11,18 @@ public class GameManager : MonoBehaviour
     public static bool isPaused = false;
     public static bool isEnded = false;
     public GameObject pauseMenuUI;
+    public GameObject timeUI;
     public GameObject endgameMenuUI;
     public GameObject completeSceneUI;
     public static float time;
     public Transform player;
     public Transform point;
-    public float waveSpawnCooldown = 10f;
-    public GameObject[] spawnPoints;
-    public GameObject[] enemiesPrefabs;
     public GameObject healthbarUI;
     public DialogueTrigger dialogue;
+    public Animator anim;
 
     private AudioManager audioManager;
     public DialogueManager dialogueManager;
-    int enemiesSpawnThisWave;
     int currentSceneIndex;
 
     private void Awake()
@@ -36,10 +35,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        time = 30f;
+        time = 180f;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         point = GameObject.FindGameObjectWithTag("WinPoint").transform;
-        dialogueManager = DialogueManager.instance;
+        //dialogueManager = DialogueManager.instance;
         audioManager = AudioManager.instance;
         if (audioManager == null)
             Debug.LogError("FREAK OUT!!! No audioManager found in this scene.");
@@ -58,14 +57,6 @@ public class GameManager : MonoBehaviour
                 Pause();
         }
 
-        waveSpawnCooldown -= Time.deltaTime;
-        if(waveSpawnCooldown <= 0)
-        {
-            enemiesSpawnThisWave += 2;
-            //SpawnEnemies(enemiesSpawnThisWave);
-            waveSpawnCooldown = 10f;
-        }
-
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -79,23 +70,18 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private void SpawnEnemies(int _enemySpawnThisWay)
-    {
-        for (int i = 0; i < Random.Range(4, _enemySpawnThisWay + 4); i++)
-        {
-            Instantiate(enemiesPrefabs[0], spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position, Quaternion.identity);
-        }
-    }
 
     private void FixedUpdate()
     {
+        timeUI.GetComponent<TextMeshProUGUI>().SetText(time.ToString());
         time -= Time.fixedDeltaTime;
         if(point == null) point = GameObject.FindGameObjectWithTag("WinPoint").transform;
         var distance = Vector3.Distance(player.position, point.position);
-
-        if (time <= 240f)
+        if (time <= 60)
         {
-            //CallDialogue(dialogue);
+            anim.SetBool("isOpen", true);
+            CallDialogue(dialogue);
+            
         }
         
         if (time <= 0)
@@ -126,7 +112,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        Debug.Log("Tính năng đang phát triển");
     }
 
     public void QuitGame()
@@ -149,8 +135,14 @@ public class GameManager : MonoBehaviour
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log(SceneManager.GetActiveScene().name);
+        DontDestroyOnLoad(player.gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name, LoadSceneMode.Single);
+        isEnded = false;
         Time.timeScale = 1f;
+        endgameMenuUI.SetActive(false);
+        player.GetComponent<PlayerController>().currentHealth = player.GetComponent<PlayerController>().originMaxHealth;
+        player.gameObject.SetActive(false);
     }
 
     public void CompleteGame()
@@ -160,16 +152,25 @@ public class GameManager : MonoBehaviour
             isEnded = true;
             Time.timeScale = 0f;
             completeSceneUI.SetActive(true);
-            healthbarUI.SetActive(false);
+            //healthbarUI.SetActive(false);
         }
     }
 
     public void NextScene()
     {
+        isEnded = false;
         player.GetComponent<PlayerController>().SavePlayer();
-        SceneManager.LoadSceneAsync(currentSceneIndex + 1, LoadSceneMode.Single);
+        DontDestroyOnLoad(player.gameObject);
+        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(audioManager.gameObject);
+        DontDestroyOnLoad(timeUI);
+        DontDestroyOnLoad(dialogueManager.gameObject);
+        DontDestroyOnLoad(GameObject.Find("UI"));
+        SceneManager.LoadSceneAsync(currentSceneIndex + 1);
         Time.timeScale = 1f;
         completeSceneUI.SetActive(false);
         player.GetComponent<PlayerController>().LoadPlayer();
+        player.position = Vector3.zero;
+        time = 180f;
     }
 }

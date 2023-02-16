@@ -77,7 +77,6 @@ public class MageEnemy : Monster
     void Start()
     {
         speed = 1f;
-        maxHealthPoint = 100;
         currentHealthPoint = maxHealthPoint;
         mage = GetComponent<Transform>();
         anim = GetComponent<Animator>();
@@ -88,6 +87,7 @@ public class MageEnemy : Monster
     // Update is called once per frame
     void Update()
     {   
+        if(player == null) player = GameObject.FindGameObjectWithTag("Player").transform;
         dir = (player.position - mage.position);
         //if (Vector3.Distance(player.position, mage.position) < 6f) RangeAttack();
         if (dir.x > 0.01f)

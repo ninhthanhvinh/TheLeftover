@@ -8,7 +8,6 @@ public class PlayerAimWeapon : MonoBehaviour
 {
     private Transform aimTransform;
     private Transform aimGunEndPointPosition;
-    private GameObject inventoryInterface;
     private new AudioManager audio;
 
     private float fireRate;
@@ -31,16 +30,6 @@ public class PlayerAimWeapon : MonoBehaviour
     }
 
     //private Animator aimAnimator;
-    private void Awake()
-    {
-        inventoryInterface = GameObject.Find("InventoryScreen");
-
-        //aimTransform = GameObject.FindGameObjectWithTag("Weapon").transform;
-        //aimGunEndPointPosition = aimTransform.Find("GunEndPointPosition");
-        //gun = aimTransform.GetComponent<GunController>();
-        //fireRate = gun.fireRate;
-        //aimAnimator = aimTransform.GetComponent<Animator>();
-    }
 
     private void Update()
     {
